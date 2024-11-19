@@ -1,6 +1,90 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>DeclaarativePipelien</groupId>
   <artifactId>DeclaarativePipelien</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+<dependencies>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>3.141.59</version>
+		</dependency>
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>4.0.9</version>
+		</dependency>
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>5.9.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>7.9.0</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>3.0.0-M1</version>
+					<configuration>
+						<suiteXmlFiles>
+							<suiteXmlFile>
+								C:\Users\danga\eclipse-workspace\Integration_Test\IntegartedXmlFile.xml
+							</suiteXmlFile>
+						</suiteXmlFiles>
+					</configuration>
+				</plugin>
+
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.13.0</version>
+					<configuration>
+
+						<properties>
+							<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+							<maven.compiler.source>1.8</maven.compiler.source>
+							<maven.compiler.target>1.8</maven.compiler.target>
+						</properties>
+
+					</configuration>
+
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+<!-- Below are from tutorial point-->
+
+<name>Learni ng Maven Examples</name>
+<description>This is a project used to demonstrate maven principles</description> <url>http://course.maven.infiniteskills.com</url>
+<licenses>
+<license>
+<name>Apache License</name>
+<comments>We are pretty good about sharing</comments>
+</license>
+</licenses>
+<organization>
+<name>Infinite Skills</name>
+<url>http://www.infiniteskills.com</url>
+</organization>
+<developers>
+<developer>
+<name>Kevin Bowersox</name>
+<email>kevin.bowersox@gmail.com</email>
+</developer>
+</developers>
+
 </project>
+
